@@ -6,7 +6,7 @@ const App = () => {
     const [text, setText] = useState("")
     const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME)
     const [isTimeRunning, setIsTimeRunning] = useState(false)
-    const [wordCount, setWordCount] = useState(0)
+    // const [wordCount, setWordCount] = useState(0)
 
     const textAreaRef = useRef(null)
     
