@@ -28,12 +28,17 @@ const App = () => {
         textAreaRef.current.focus()
     }
     
-    const endGame = () => {
-        setIsTimeRunning(false)
-        setWordCount(calculateWordCount(text))
-    }
+    // const endGame = () => {
+    //     setIsTimeRunning(false)
+    //     setWordCount(calculateWordCount(text))
+    // }
     
     useEffect(() => {
+        const endGame = () => {
+            setIsTimeRunning(false)
+            setWordCount(calculateWordCount(text))
+        }
+        
         if(isTimeRunning && timeRemaining > 0) {
             setTimeout(() => {
                 setTimeRemaining(time => time - 1)
