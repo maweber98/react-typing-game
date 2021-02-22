@@ -28,10 +28,10 @@ const App = () => {
         textAreaRef.current.focus()
     }
     
-    // const endGame = () => {
-    //     setIsTimeRunning(false)
-    //     setWordCount(calculateWordCount(text))
-    // }
+    const endGame = () => {
+        setIsTimeRunning(false)
+        // setWordCount(calculateWordCount(text))
+    }
     
     useEffect(() => {
 
@@ -40,9 +40,7 @@ const App = () => {
                 setTimeRemaining(time => time - 1)
             }, 1000)
         } else if(timeRemaining === 0) {
-            // endGame()
-            setIsTimeRunning(false)
-            setWordCount(calculateWordCount(text))
+            endGame()
         }
     }, [timeRemaining, isTimeRunning])
     
@@ -62,7 +60,7 @@ const App = () => {
             >
                 Start
             </button>
-            <h1>Word count: {wordCount}</h1>
+            <h1>Word count: {calculateWordCount(text)}</h1>
         </div>
     )
 }
