@@ -34,17 +34,15 @@ const App = () => {
     // }
     
     useEffect(() => {
-        const endGame = () => {
-            setIsTimeRunning(false)
-            setWordCount(calculateWordCount(text))
-        }
-        
+
         if(isTimeRunning && timeRemaining > 0) {
             setTimeout(() => {
                 setTimeRemaining(time => time - 1)
             }, 1000)
         } else if(timeRemaining === 0) {
-            endGame()
+            // endGame()
+            setIsTimeRunning(false)
+            setWordCount(calculateWordCount(text))
         }
     }, [timeRemaining, isTimeRunning])
     
