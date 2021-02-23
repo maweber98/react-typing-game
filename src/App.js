@@ -45,22 +45,31 @@ const App = () => {
     }, [timeRemaining, isTimeRunning])
     
     return (
-        <div>
-            <h1>How fast do you type?</h1>
-            <textarea
-                ref={textAreaRef}
-                onChange={handleChange}
-                value={text}
-                disabled={!isTimeRunning}
-            />
-            <h4>Time remaining: {timeRemaining}</h4>
+        <div className="container">
+            <h1 className="fs-1 m-3">How fast do you type?</h1>
+
+            <div className="form-floating">
+                <textarea 
+                    className="form-control" 
+                    placeholder="Leave a comment here" 
+                    id="floatingTextarea2" 
+                    ref={textAreaRef}
+                    onChange={handleChange}
+                    value={text}
+                    disabled={!isTimeRunning}
+                    style={{height: "200px"}}
+                >
+                </textarea>
+            </div>
+            <h4 className="fs-3 m-3">Time remaining: {timeRemaining}</h4>
             <button 
+                className="btn btn-primary"
                 onClick={startGame}
                 disabled={isTimeRunning}
             >
                 Start
             </button>
-            <h1>Word count: {calculateWordCount(text)}</h1>
+            <h1 className="fs-3 m-3">Word count: {calculateWordCount(text)}</h1>
         </div>
     )
 }
