@@ -1,6 +1,6 @@
 html, body {
     background: white;
-    color: black;
+    color: whitesmoke;
     margin:0;
     padding: 0;
     padding-top: 10px;
@@ -11,6 +11,12 @@ html, body {
 
 body {
     font-weight: 400;
+    background-image: url("/src/images/speed.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 button {

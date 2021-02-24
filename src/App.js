@@ -1,6 +1,7 @@
-import React, {useState, useEffect, useRef} from "react"
+import React, {useState, useEffect, useRef} from "react";
 
 const App = () => {
+
     const STARTING_TIME = 60
     
     const [text, setText] = useState("")
