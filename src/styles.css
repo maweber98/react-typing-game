@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html, body {
-    background: white;
+    background: black;
     color: whitesmoke;
     margin:0;
     padding: 0;
@@ -12,7 +17,7 @@ html, body {
 body {
     font-weight: 400;
     background-image: url("/src/images/speed.jpg"); /* The image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
+    background-color: black; /* Used if the image is unavailable */
     height: 100vh;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
@@ -39,7 +44,7 @@ h1 {
     text-align:center;
 }
 
-textarea {
+/* textarea {
     font-family: Arial, Helvetica, sans-serif;
     border: 3px solid black;
     width: 90%;
@@ -48,8 +53,81 @@ textarea {
     height: 200px;
     background: #00b800;
     padding: 10px;
+} */
+
+.grad {
+    background-image: linear-gradient(darkGray, whitesmoke);
+  }
+
+.grad:disabled {
+    background-color: #a5a2a2 !important;
 }
 
-textarea:disabled {
-    background-color: #a5a2a2;
+/* .timer-wrapper {
+    display: flex;
+    justify-content: center;
+} */
+  
+.timer {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.text {
+    color: white;
+    font-size: medium;
+}
+
+.value {
+    font-size: 40px;
+}
+
+/* Game Headline */
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+#leftbox {
+    padding-top: 3rem;
+    float:left;  
+    width:25%; 
+} 
+#middlebox{ 
+    padding-top: 3rem;
+    float:left; 
+    display: flex; 
+    width:50%; 
+    justify-content: center;
+    align-items: center;
+    height:180px;
+} 
+#rightbox{ 
+    padding-top: 3rem;
+    float:right; 
+    width:25%; 
+} 
